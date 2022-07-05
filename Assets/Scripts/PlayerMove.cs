@@ -18,6 +18,11 @@ namespace DefaultNamespace
             StandartRigidbody = GetComponent<Rigidbody>();
         }
 
+        private void OnTriggerEnter(Collider other)
+        {
+            throw new NotImplementedException();
+        }
+
         public void Move()
         {
             _horizontal = Input.GetAxis("Horizontal");
