@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class BaffBase : InteractiveObject
 {
+    [SerializeField]
+    
     protected override void TriggerAccept(GameObject obj)
     {
         throw new System.NotImplementedException();
