@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using DefaultNamespace.Abstract;
 using DefaultNamespace.Enums;
 using UnityEngine;
@@ -17,29 +18,11 @@ public class BaffBase : InteractiveObject
 
     protected override void TriggerAccept(GameObject obj)
     {
-        Use(obj);
+        var baff = new BaffEffects();
+        baff.UseBaff(obj, _type, _value);
+        
         if (_reusable)
-        {
             RemoveBaff();
-        }
-    }
-
-
-    private void Use(GameObject obj)
-    {
-        switch (_type)
-        {
-            case BaffType.ExtraHealth:
-                break;
-            case BaffType.ExtraSpeed:
-                break;
-            default: break;
-        }
-    }
-
-    private void ExtraHealth(GameObject obj)
-    {
-        obj.GetComponent<Health>().AddHealth(_value);
     }
 
     private void RemoveBaff()
