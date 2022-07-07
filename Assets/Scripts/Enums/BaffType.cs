@@ -1,6 +1,6 @@
 namespace DefaultNamespace.Enums
 {
-    public enum BaffTypes
+    public enum BaffType
     {
         ExtraHealth,
         ExtraSpeed
