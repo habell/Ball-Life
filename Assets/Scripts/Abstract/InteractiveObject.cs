@@ -44,7 +44,7 @@ namespace DefaultNamespace.Abstract
             }
             else
             {
-                if(!GetComponent<Collider>().isTrigger) GetComponent<Collider>().isTrigger = true;
+                if (!GetComponent<Collider>().isTrigger) GetComponent<Collider>().isTrigger = true;
             }
         }
 

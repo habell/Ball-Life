@@ -20,7 +20,7 @@ public class BaffBase : InteractiveObject
     {
         var baff = new BaffEffects();
         baff.UseBaff(obj, _type, _value);
-        
+
         if (!_reusable)
             RemoveBaff();
     }

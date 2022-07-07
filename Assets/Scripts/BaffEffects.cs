@@ -19,12 +19,12 @@ namespace DefaultNamespace
                 default: break;
             }
         }
-        
+
         private void ExtraHealth(GameObject obj, float value)
         {
             obj.GetComponent<Health>().AddHealth(value);
         }
-        
+
         private void ExtraSpeed(GameObject obj, float value)
         {
             // TODO

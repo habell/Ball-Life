@@ -24,7 +24,7 @@ public class Health : MonoBehaviour
     {
         _value += extraHealth;
     }
-    
+
     private void Death()
     {
         throw new System.NotImplementedException();
