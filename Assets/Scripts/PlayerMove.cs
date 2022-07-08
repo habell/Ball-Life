@@ -8,11 +8,11 @@ namespace DefaultNamespace
     public class PlayerMove : PlayerMoveStandart, IPlayerMoveController
     {
         private float _horizontal;
-        
+
         private float _vertical;
 
         private Vector3 _playerMovement;
-        
+
         private void Awake()
         {
             StandartRigidbody = GetComponent<Rigidbody>();
@@ -29,9 +29,8 @@ namespace DefaultNamespace
             _vertical = Input.GetAxis("Vertical");
 
             _playerMovement = new Vector3(_horizontal, 0f, _vertical);
-            
+
             StandartRigidbody.AddForce(_playerMovement * Speed);
         }
-        
     }
 }
