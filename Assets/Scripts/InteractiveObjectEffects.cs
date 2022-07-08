@@ -1,6 +1,6 @@
 using DefaultNamespace.Enums;
 using UnityEngine;
-using UnityEngine.Android;
+using static UnityEngine.Debug;
 
 namespace DefaultNamespace
 {
@@ -8,6 +8,7 @@ namespace DefaultNamespace
     {
         public void UseBaff(GameObject obj, BaffType type, float value)
         {
+            Log("Used Baff");
             switch (type)
             {
                 case BaffType.ExtraHealth:
@@ -21,6 +22,7 @@ namespace DefaultNamespace
 
         public void UseDebaff(GameObject obj, DebaffType type, float value)
         {
+            Log("Used Debaff");
             switch (type)
             {
                 case DebaffType.LowHealth:
@@ -34,6 +36,7 @@ namespace DefaultNamespace
 
         public void UseTrap(GameObject obj, TrapType type, float value)
         {
+            Log("Used Trap");
             switch (type)
             {
                 case TrapType.Damage:
@@ -46,6 +49,10 @@ namespace DefaultNamespace
         }
 
         //=============================== BAFFS
+        private void WinBaffAdd(GameObject obj)
+        {
+            
+        }
         private void ExtraHealth(GameObject obj, float value)
         {
             obj.GetComponent<Health>().AddHealth(value);
