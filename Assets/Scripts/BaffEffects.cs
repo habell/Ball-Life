@@ -19,7 +19,23 @@ namespace DefaultNamespace
                 default: break;
             }
         }
+        
+        public void UseDebaff(GameObject obj, DebaffType type, float value)
+        {
+            switch (type)
+            {
+                case DebaffType.LowHealth:
+                    // TODO:
+                    break;
+                case DebaffType.LowSpeed:
+                    // TODO:
+                    break;
+                default: break;
+            }
+        }
 
+
+        //======= BAFFS
         private void ExtraHealth(GameObject obj, float value)
         {
             obj.GetComponent<Health>().AddHealth(value);
@@ -29,5 +45,10 @@ namespace DefaultNamespace
         {
             // TODO
         }
+        //========
+        
+        //======== DEBAFFS
+        
+        //
     }
 }

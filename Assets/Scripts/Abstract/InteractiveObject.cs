@@ -11,6 +11,12 @@ namespace DefaultNamespace.Abstract
     {
         [SerializeField]
         private InteractiveObjectType _objectType;
+        
+        [SerializeField]
+        protected float _value;
+
+        [SerializeField]
+        protected bool _reusable;
 
         public InteractiveObjectType ObjectType => _objectType;
 

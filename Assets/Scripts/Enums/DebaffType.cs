@@ -1,11 +1,9 @@
 namespace DefaultNamespace.Enums
 {
-    public enum DebaffTypes
+    public enum DebaffType
     {
         LowHealth,
         LowSpeed,
-        Freeze,
-        Death,
-        Damage
+        Freeze
     }
 }
