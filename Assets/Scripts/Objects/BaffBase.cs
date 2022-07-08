@@ -12,7 +12,7 @@ public class BaffBase : InteractiveObject
 
     protected override void TriggerAccept(GameObject obj)
     {
-        var baff = new BaffEffects();
+        var baff = new InteractiveObjectEffects();
         baff.UseBaff(obj, _type, _value);
 
         if (!_reusable)

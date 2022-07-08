@@ -4,7 +4,7 @@ using UnityEngine.Android;
 
 namespace DefaultNamespace
 {
-    public class BaffEffects : MonoBehaviour
+    public class InteractiveObjectEffects : MonoBehaviour
     {
         public void UseBaff(GameObject obj, BaffType type, float value)
         {
@@ -16,26 +16,36 @@ namespace DefaultNamespace
                 case BaffType.ExtraSpeed:
                     ExtraSpeed(obj, value);
                     break;
-                default: break;
             }
         }
-        
+
         public void UseDebaff(GameObject obj, DebaffType type, float value)
         {
             switch (type)
             {
                 case DebaffType.LowHealth:
-                    // TODO:
+                    LowHealth();
                     break;
                 case DebaffType.LowSpeed:
-                    // TODO:
+                    LowSpeed();
                     break;
-                default: break;
             }
         }
 
+        public void UseTrap(GameObject obj, TrapType type, float value)
+        {
+            switch (type)
+            {
+                case TrapType.Damage:
+                    Damage();
+                    break;
+                case TrapType.Death:
+                    Death();
+                    break;
+            }
+        }
 
-        //======= BAFFS
+        //=============================== BAFFS
         private void ExtraHealth(GameObject obj, float value)
         {
             obj.GetComponent<Health>().AddHealth(value);
@@ -45,10 +55,27 @@ namespace DefaultNamespace
         {
             // TODO
         }
-        //========
-        
-        //======== DEBAFFS
-        
-        //
+
+        //================================ DEBAFFS
+        private void LowHealth()
+        {
+            // TODO
+        }
+
+        private void LowSpeed()
+        {
+            // TODO
+        }
+
+        //================================ TRAPS
+        private void Death()
+        {
+            // TODO
+        }
+
+        private void Damage()
+        {
+            // TODO
+        }
     }
 }

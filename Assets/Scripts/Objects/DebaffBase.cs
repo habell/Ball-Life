@@ -11,7 +11,7 @@ namespace DefaultNamespace.Objects
 
         protected override void TriggerAccept(GameObject obj)
         {
-            var debaff = new BaffEffects();
+            var debaff = new InteractiveObjectEffects();
             debaff.UseDebaff(obj, _type, _value);
 
             if (!_reusable)

@@ -8,10 +8,20 @@ namespace DefaultNamespace.Objects
     {
         [SerializeField]
         private TrapType _type;
-        
+
         protected override void TriggerAccept(GameObject obj)
         {
-            throw new System.NotImplementedException();
+            var trap = new InteractiveObjectEffects();
+            trap.UseTrap(obj, _type, _value);
+
+            if (!_reusable)
+                RemoveBaff();
+        }
+
+        private void RemoveBaff()
+        {
+            print("Trap Removed!");
+            Destroy(gameObject);
         }
     }
 }
