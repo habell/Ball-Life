@@ -38,7 +38,7 @@ namespace DefaultNamespace.Abstract
                     }
                 }
 
-                if (!haveTrigger)
+                if (!haveTrigger)   
                 {
                     GetComponent<Collider>().isTrigger = true;
                     Debug.LogWarning(
@@ -62,7 +62,7 @@ namespace DefaultNamespace.Abstract
                 {
                     if (interactiveObject.ObjectType == objectType)
                     {
-                        TriggerAccept(other.gameObject);
+                        TriggerAccept(other.gameObject); // 
                     }
                 }
             }
