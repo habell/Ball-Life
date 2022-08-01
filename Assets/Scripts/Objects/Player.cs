@@ -9,10 +9,12 @@ public class Player : MonoBehaviour
 {
     [SerializeField]
     private float _speed;
-
+    
     [SerializeField]
     private int _winBaffsNeed;
     private int _winBaffsCount;
+
+    private Health _health;
     
     private IPlayerMoveController _playerMoveController;
     
@@ -38,6 +40,7 @@ public class Player : MonoBehaviour
     {
         _playerMoveController ??= GetComponent<IPlayerMoveController>();
         _playerMoveController.SetSpeed(_speed);
+        _health = GetComponent<Health>();
     }
 
     private void FixedUpdate()
@@ -45,6 +48,10 @@ public class Player : MonoBehaviour
         _playerMoveController.Move();
     }
 
+    public void AddHealth(float extraHealth)
+    {
+        _health.AddHealth(extraHealth);
+    }
     public void AddWinCount(int value)
     {
         print("Player added WinBaffWalue!");
