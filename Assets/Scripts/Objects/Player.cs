@@ -50,7 +50,14 @@ public class Player : MonoBehaviour
 
     public void AddHealth(float extraHealth)
     {
-        _health.AddHealth(extraHealth);
+        try
+        {
+            _health.AddHealth(extraHealth);
+        }
+        catch(Exception e)
+        {
+            // ignored
+        }
     }
     public void AddWinCount(int value)
     {
