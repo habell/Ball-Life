@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using Interfaces;
 using UnityEngine;
 
+public delegate void PlayerUpdateInfo;
+
 [RequireComponent(typeof(IPlayerMoveController))]
 public class Player : MonoBehaviour
 {
@@ -14,6 +16,8 @@ public class Player : MonoBehaviour
     private int _winBaffsNeed;
     private int _winBaffsCount;
 
+    private PlayerUpdateInfo _playerUpdateInfo;
+    
     private Health _health;
     
     private IPlayerMoveController _playerMoveController;
@@ -63,5 +67,6 @@ public class Player : MonoBehaviour
     {
         print("Player added WinBaffWalue!");
         WinBaffsCount += value;
+        
     }
 }
