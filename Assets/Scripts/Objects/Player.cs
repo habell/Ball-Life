@@ -4,8 +4,8 @@ using System.Collections.Generic;
 using Interfaces;
 using UnityEngine;
 
-public delegate void PlayerUpdateInfo;
 
+public delegate void PlayerUpdateInfo();
 [RequireComponent(typeof(IPlayerMoveController))]
 public class Player : MonoBehaviour
 {
